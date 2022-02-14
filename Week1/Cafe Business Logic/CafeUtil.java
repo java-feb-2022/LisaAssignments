@@ -1,8 +1,4 @@
-
 import java.util.ArrayList;
-import java.util.Scanner; //used to get user input
-
-import javax.swing.plaf.MenuItemUI;
 
 public class CafeUtil {
     public int getStreakGoal(int numWeeks) {
