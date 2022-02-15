@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 public class Order {
     // String name
     public String name;
@@ -9,5 +10,5 @@ public class Order {
     public boolean ready; // defaults false
 
     // ArrayList<Item> items
-    public ArrayList<Item> items = new ArrayList<Item>();
+    public ArrayList<Items> items = new ArrayList<Items>();
 }
