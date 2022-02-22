@@ -1,0 +1,2 @@
+INDEX VERSION 1.131+C:\Users\lisah\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\CD.JAVA.Week2\com.caresoft.clinicapp\.metadata\.plugins\org.eclipse.jdt.core
+1865797976.index
