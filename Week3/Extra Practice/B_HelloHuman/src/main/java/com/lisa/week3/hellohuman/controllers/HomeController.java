@@ -15,31 +15,16 @@ public class HomeController {
 			@RequestParam(required=false) String lname, 
 			@RequestParam(required=false) Integer times) {
 		String greeting = "Hello " + fname +" "+ lname+" ";
-		String result;
-//		StringBuilder disp = new StringBuilder();
-		String disp = "";
+		String result = "";
 		
 		if (times == null) {
 			result = greeting;
 		} else {
 			for (int i = 1; i<=times; i++) {
-				disp = disp + greeting;
+				result = result + greeting;
 			}
 		}	
-		return disp;
+		return result;
 
 		}
 	}
-
-//
-//    @RequestMapping("/")
-//    public String index(@RequestParam(value="q", required=false) String searchQuery) {
-//    	if(searchQuery == null) {
-//    		return "Your search returned nothing";
-//    		// your search was http://localhost:8080/query/?
-//    	} else {
-//        return "You searched for: " + searchQuery;
-//        //search by http://localhost:8080/query/?q=Lisa
-//    	}
-//    }
-//}
