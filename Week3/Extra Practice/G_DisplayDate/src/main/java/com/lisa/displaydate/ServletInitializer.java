@@ -1,4 +1,4 @@
-package com.lisa.hoppersreceipt;
+package com.lisa.displaydate;
 
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;

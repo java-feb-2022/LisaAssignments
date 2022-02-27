@@ -5,19 +5,28 @@
     <%@ page isErrorPage="true"  %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 
+<link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css" />
+<script src="/webjars/jquery/jquery.min.js"></script>
+<script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
+
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
-<title>TEMPLATE</title>
+	<meta charset="ISO-8859-1">
+	<title>TEMPLATE</title>
+	<link rel="stylesheet" type="text/css" href="/css/style.css">
+	<script type="text/javascript" src="js/app.js"></script>
 </head>
 <body>
-	
-	<h1>Customer name</h1>
-	<h3>Item name: <c:out value="${first}"/></h3>
-	<h3>Price: $ <c:out value="${price}"/></h3>
-	<h3>Description: <c:out value="${description}"/></h3>
-	<h3>Vendor: <c:out value="${vendor}"/></h3>
+	<div class="card container">
+		<h1 class="card-header">Customer name</h1>
+		<div class="card-body">
+			<h5 class="card-text">Item name: <c:out value="${first}"/></h3>
+			<h5 class="card-text">Price: $ <c:out value="${price}"/></h3>
+			<h5 class="card-text">Description: <c:out value="${description}"/></h3>
+			<h5 class="card-text">Vendor: <c:out value="${vendor}"/></h3>
+		</div>
+	</div>
 	
 </body>
 </html>

@@ -15,16 +15,13 @@
 	<meta charset="ISO-8859-1">
 	<title>TEMPLATE</title>
 	<link rel="stylesheet" type="text/css" href="/css/style.css">
-	<script type="text/javascript" src="js/app.js"></script>
 </head>
 <body>
-	<div class="card container">
-		<h1 class="card-header">Customer name</h1>
-		<div class="card-body">
-			<h5 class="card-text">Item name: <c:out value="${first}"/></h3>
-			<h5 class="card-text">Price: $ <c:out value="${price}"/></h3>
-			<h5 class="card-text">Description: <c:out value="${description}"/></h3>
-			<h5 class="card-text">Vendor: <c:out value="${vendor}"/></h3>
+	<div class="card container text-center">
+		<h1 class="card-header">Display Date</h1>
+		<div class = "card-body text-center">
+			<a class = "btn btn-info" href="/date">Date</a>
+			<a class = "btn btn-primary" href="/time">Time</a>
 		</div>
 	</div>
 	

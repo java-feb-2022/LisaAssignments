@@ -9,15 +9,19 @@ public class HomeController {
 	@RequestMapping("/")
 	public String index(Model model) {
 		
-		String firstName="Ada";
-		String lastName = "Lovelace";
-		String email = "one@zeroes.com";
-		Integer age = 160;
+		String firstName="Grace";
+		String lastName = "Hopper";
+		String item = "Copper Wire";
+		Double price = 5.25;
+		String description="Metal strips. Also on illustrations of nanoseconds";
+		String vendor = "Little Things Corner Store";
 		
 		model.addAttribute("first", firstName);
 		model.addAttribute("last",lastName);
-		model.addAttribute("email",email);
-		model.addAttribute("age",age);
+		model.addAttribute("item",item);
+		model.addAttribute("price",price);
+		model.addAttribute("description",description);
+		model.addAttribute("vendor",vendor);
 		
 		return "index.jsp";
 		

@@ -8,25 +8,15 @@
 <link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css" />
 <script src="/webjars/jquery/jquery.min.js"></script>
 <script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/app.js"></script>
 
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="ISO-8859-1">
-	<title>TEMPLATE</title>
-	<link rel="stylesheet" type="text/css" href="/css/style.css">
-	<script type="text/javascript" src="js/app.js"></script>
+<meta charset="ISO-8859-1">
+<title>Date</title>
 </head>
 <body>
-	<div class="card container">
-		<h1 class="card-header">Customer name</h1>
-		<div class="card-body">
-			<h5 class="card-text">Item name: <c:out value="${first}"/></h3>
-			<h5 class="card-text">Price: $ <c:out value="${price}"/></h3>
-			<h5 class="card-text">Description: <c:out value="${description}"/></h3>
-			<h5 class="card-text">Vendor: <c:out value="${vendor}"/></h3>
-		</div>
-	</div>
-	
+	<h3 id="date" class="text-center"> Date: <c:out value="${date}"/></h3>
 </body>
 </html>
