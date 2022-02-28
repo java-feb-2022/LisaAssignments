@@ -18,7 +18,9 @@
 </head>
 <body>
 
-		<h3>You have enjoyed the fruits of your labor, but now is a great time to spend time with family and friends.</h3>
+		<h3>
+			<c:out value=${formResultFinal}"/>
+		</h3>
 
 	
 </body>

@@ -4,6 +4,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.servlet.http.HttpSession;
 
@@ -24,12 +25,12 @@ public class MainController {
 	
 	@RequestMapping(value="/processForm", method=RequestMethod.POST)
 	public String processForm(
-		@PathVariable(value="randNumber") int randNumber,
-		@PathVariable(value="cityName") String cityName,
-		@PathVariable(value="personName") String personName,
-		@PathVariable(value="hobby") String hobby,
-		@PathVariable(value="livingThing") String livingThing,
-		@PathVariable(value="somethingNice") String somethingNice,
+		@RequestParam(value="randNumber") int randNumber,
+		@RequestParam(value="cityName") String cityName,
+		@RequestParam(value="personName") String personName,
+		@RequestParam(value="hobby") String hobby,
+		@RequestParam(value="livingThing") String livingThing,
+		@RequestParam(value="somethingNice") String somethingNice,
 		HttpSession session) {
 		String formResults=String.format(
 				"words %s %s %s %s %s", randNumber, cityName, personName, hobby, somethingNice
