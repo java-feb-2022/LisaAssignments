@@ -33,7 +33,7 @@ public class MainController {
 		@RequestParam(value="somethingNice") String somethingNice,
 		HttpSession session) {
 		String formResults=String.format(
-				"words %s %s %s %s %s", randNumber, cityName, personName, hobby, somethingNice
+				"In %s years, you will live in %s with %s as your roommate, selling origamis for a living. The next time you see a %s, you will have good luck. Also, %s", randNumber, cityName, personName, hobby, livingThing, somethingNice
 				);
 		session.setAttribute("formResultFinal",formResults);
 		return "redirect:/omikuji/display";

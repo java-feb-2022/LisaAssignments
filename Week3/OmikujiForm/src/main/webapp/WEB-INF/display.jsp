@@ -9,7 +9,7 @@
 <html>
 <head>
 	<meta charset="ISO-8859-1">
-	<title>TEMPLATE</title>
+	<title>Fortune</title>
 	<link rel="stylesheet" type="text/css" href="/css/style.css">
 	<script type="text/javascript" src="js/app.js"></script>
 	<link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css" />
@@ -19,7 +19,7 @@
 <body>
 
 		<h3>
-			<c:out value=${formResultFinal}"/>
+			<c:out value="${formResultFinal}"/>
 		</h3>
 
 	
