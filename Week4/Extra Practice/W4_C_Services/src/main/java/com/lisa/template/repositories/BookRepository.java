@@ -1,11 +1,11 @@
-package com.lisa.datarepositories.mvc.repositories;
+package com.lisa.template.repositories;
 
 import java.util.List;
 
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
-import com.lisa.datarepository.models.Book;
+import com.lisa.template.models.Book;
 
 @Repository // connection to the database
 public interface BookRepository extends CrudRepository<Book, Long>{
