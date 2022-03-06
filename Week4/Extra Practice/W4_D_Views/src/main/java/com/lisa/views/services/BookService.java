@@ -1,12 +1,12 @@
-package com.lisa.mvc.services;
+package com.lisa.views.services;
 
 import java.util.List;
 import java.util.Optional;
 
 import org.springframework.stereotype.Service;
 
-import com.lisa.mvc.models.Book;
-import com.lisa.mvc.repositories.BookRepository;
+import com.lisa.views.models.Book;
+import com.lisa.views.repositories.BookRepository;
 
 @Service
 public class BookService {

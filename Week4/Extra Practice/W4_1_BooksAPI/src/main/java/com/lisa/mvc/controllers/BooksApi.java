@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.lisa.mvc.models.Book;
 import com.lisa.mvc.services.BookService;
 
-@RestController
+@RestController // Responds with raw data (JSON / String literals) Controller will return a jsp page
 public class BooksApi {
  private final BookService bookService;
  public BooksApi(BookService bookService){
