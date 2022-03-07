@@ -20,7 +20,7 @@
 	<h2>Create a New Expense</h2>
 	<form:form action='/expenses' method = 'post' modelAttribute="expense">
 		<div>
-			<form:label path= "expDescription">Title:</form:label>
+			<form:label path= "expDescription">Expense:</form:label>
 			<form:errors path= "expDescription" class="text-danger"/>
 			<form:input path= "expDescription"/>
 		</div>
@@ -30,7 +30,7 @@
 	        <form:textarea path="vendor"/>
 		</div>
 		<div>
-	        <form:label path="amount">Pages</form:label>
+	        <form:label path="amount">Amount</form:label>
 	        <form:errors path="amount" class="text-danger"/>     
 	        <form:input type="number" path="amount"/>
 		</div>

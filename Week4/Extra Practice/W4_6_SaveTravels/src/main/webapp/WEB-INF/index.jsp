@@ -9,7 +9,7 @@
 <html>
 <head>
 	<meta charset="ISO-8859-1">
-	<expDescription>Expenses</expDescription>
+	<title>Expenses</title>
 	<link rel="stylesheet" type="text/css" href="/css/style.css">
 	<script type="text/javascript" src="js/app.js"></script>
 	<link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css" />
@@ -23,7 +23,7 @@
 		<div class="card-body">
 			<table class="table table-striped table-bordered">
 		        <tr>
-		        	<th>Title</th>
+		        	<th>Expenses</th>
 		        	<th>Vendor:</th>
 		        	<th>Language</th>
 		        	<th>Page Count</th>
