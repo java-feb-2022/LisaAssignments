@@ -24,18 +24,18 @@
     <input type="hidden" name="_method" value="put">
     <p>
         <form:label path="expDescription">Title</form:label>
-        <form:errors path="expDescription"/>
-        <form:input path="expDescription"/>
+        <form:errors path="expDescription" class="text-danger"/>
+        <form:input class="form-control" path="expDescription"/>
     </p>
     <p>
         <form:label path="vendor">Vendor</form:label>
-        <form:errors path="vendor"/>
-        <form:textarea path="vendor"/>
+        <form:errors path="vendor" class="text-danger"/>
+        <form:textarea class="form-control" path="vendor"/>
     </p>
     <p>
         <form:label path="amount">Pages</form:label>
-        <form:errors path="amount"/>     
-        <form:input type="number" path="amount"/>
+        <form:errors path="amount" class="text-danger"/>     
+        <form:input class="form-control" type="number" path="amount"/>
     </p>    
     <input type="submit" value="Submit"/>
 </form:form>

@@ -23,6 +23,12 @@ public class ExpenseController {
 	@Autowired
 	ExpenseService expenseService;
 	
+	
+	@GetMapping("/")
+	public String home() {
+		return "redirect:/expenses";
+	}
+	
 	@GetMapping("/expenses")
 	public String index(Model model, @ModelAttribute("expense") Expense expense) {
 		List<Expense> expenses = expenseService.allExpenses();
@@ -39,7 +45,6 @@ public class ExpenseController {
 	public String create(
 			@Valid @ModelAttribute("expense") Expense expense, BindingResult result) {
 		if (result.hasErrors()) {
-//			return "new.jsp";
 			return "index.jsp";
 			} else {
 				expenseService.createExpense(expense);
@@ -62,7 +67,8 @@ public class ExpenseController {
     }
     
     @PutMapping("/expenses/{id}")
-    public String update(@Valid @ModelAttribute("expense") Expense expense, BindingResult result) {
+    public String update(
+    		@Valid @ModelAttribute("expense") Expense expense, BindingResult result) {
         if (result.hasErrors()) {
             return "edit.jsp";
         } else {

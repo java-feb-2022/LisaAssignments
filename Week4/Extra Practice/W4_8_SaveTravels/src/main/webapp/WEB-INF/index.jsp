@@ -19,7 +19,6 @@
 <body>
 	<div class="card container">
 		<h1 class="card-header">Save Travels</h1>
-		<a href="/expenses/new">Create new expense</a>
 		<div class="card-body">
 			<table class="table table-striped table-bordered">
 		        <tr>
