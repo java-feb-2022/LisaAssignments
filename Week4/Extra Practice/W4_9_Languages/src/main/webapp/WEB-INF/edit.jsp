@@ -17,7 +17,13 @@
 	<script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
 </head>
 <body>
-
+	<div class="d-flex mx-5" >
+		<form class="mx-2" action="/languages/delete/${editLanguage.id}" method="post">
+		    <input type="hidden" name="_method" value="delete">
+		    <input type="submit" value="Delete" class="btn btn-danger">
+		</form>
+		<a class="btn btn-primary" href="/">Dashboard</a>
+	</div>
 	<h1>Edit this language: <c:out value="${editLanguage.name}"/></h1>
 
 	<form:form action="/languages/${editLanguage.id}" method="post" modelAttribute="editLanguage">
