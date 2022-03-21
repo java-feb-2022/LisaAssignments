@@ -28,19 +28,47 @@
 <script src="/webjars/jquery/jquery.min.js"></script>
 <script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
 </head>
-<body class="card yt-5 pt-5 bg-primary">
-	
-	<div>
-		<div class="card-heading text-center align-self-center">
-			<h2>Welcome ${userLogin.username}</h2>
-			<a class="btn btn-danger" href="/logout">Logout</a>
-		</div>
-		<div class="card-body">
+<body class="card bg-dark yt-5 pt-5 ">
+	<div class="card bg-dark">
+		<div class="card-header text-light text-center">
+			<a class="btn btn-warning" href="/books">Back to the shelves</a>
+			<h1>${showBook.title}</h1>
+			<h5>
+			
+				<c:choose>
+					<c:when test="${showBook.modifier.id == userLogin.id}">
+						You
+					</c:when>
+					<c:otherwise>
+						${showBook.modifier.name}
+					</c:otherwise>	
+				
+				</c:choose>
+				
+			read ${showBook.title} by ${showBook.authorName}</h5>
+			<h5>Here are 
+				<c:choose>
+					<c:when test="${showBook.modifier.id == userLogin.id}">
+						your
+					</c:when>
+					<c:otherwise>
+						${showBook.modifier.name}'s
+					</c:otherwise>	
+						
+				</c:choose>
+			thoughts</h5>
 			<hr>
-			<h5 class="card-body">This is your dashboard. Nothing to see here yet.</h5>
 		</div>
-		
+		<div class="card-body bg-light mx-auto" style="width: 60rem">
+			<hr>
+			<p class="text-dark text-left">
+				${showBook.thoughts}
+			</p>
+			<hr>
+		</div>
+		<hr>
 	</div>
-		
+	<a class="btn btn-primary" href="/books/${showBook.id}/edits">Edit</a>
+	
 </body>
 </html>

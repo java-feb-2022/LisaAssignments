@@ -29,50 +29,33 @@
 <script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
 </head>
 <body class="card yt-5 pt-5 bg-dark">
+	<div class="card-header text-light text-center">
+		<h1>Book Club</h1>
+		<h5>A place for friends to share thoughts on books</h5>
+		<a class="btn btn-warning" href="/books">Back to the shelves</a>
+		<hr>
+	</div>
 	<div class="d-flex d-flex text-center align-self-center">
 		<div class="p-4 bg-secondary text-white mx-10">
 			<h1 class="card-header">Register</h1>
-			<form:form action="/register" method="post" modelAttribute="newUser">
+			<form:form action="/books/create" method="POST" modelAttribute="addBook">
 				<div class="form-group card-body">
-					<form:label path="username">Username:</form:label>
-					<form:errors path="username"/>
-					<form:input class="form-control" path="username"/>
+					<form:label path="title">Title:</form:label>
+					<form:errors path="title"/>
+					<form:input class="form-control" path="title"/>
 				</div>
 				<div class="form-group card-body">
-					<form:label path="email">Email:</form:label>
-					<form:errors path="email"/>
-					<form:input class="form-control" path="email"/>
+					<form:label path="authorName">Author Name:</form:label>
+					<form:errors path="authorName"/>
+					<form:input class="form-control" path="authorName"/>
 				</div>
 				<div class="form-group card-body">
-					<form:label path="password">Password:</form:label>
-					<form:errors path="password"/>
-					<form:input type="password" class="form-control" path="password"/>
+					<form:label path="thoughts">Thoughts:</form:label>
+					<form:errors path="thoughts"/>
+					<form:textarea class="form-control" path="thoughts"/>
 				</div>
-				<div class="form-group card-body">
-					<form:label path="confirm">Confirm Password:</form:label>
-					<form:errors path="confirm"/>
-					<form:input type="password" class="form-control" path="confirm"/>
-				</div>
-				<input class="btn btn-warning" type="submit" value="Submit"/>
-			
-			</form:form>
-		</div>
-		<div class="p-4 card bg-secondary text-white mx-5">
-			<h1 class="card-header">Login</h1>
-			<form:form action="/login" method="post" modelAttribute="newLogin">
-
-				<div class="form-group card-body">
-					<form:label path="email">Email:</form:label>
-					<form:errors path="email"/>
-					<form:input class="form-control" path="email"/>
-				</div>
-				<div class="form-group card-body">
-					<form:label path="password">Password:</form:label>
-					<form:errors path="password"/>
-					<form:input type="password" class="form-control" path="password"/>
-				</div>
+				
 				<input class="btn btn-primary" type="submit" value="Submit"/>
-			
 			</form:form>
 		</div>
 

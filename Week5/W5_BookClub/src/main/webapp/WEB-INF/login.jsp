@@ -29,14 +29,19 @@
 <script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
 </head>
 <body class="card yt-5 pt-5 bg-dark">
+	<div class="card-header text-light text-center">
+		<h1>Book Club</h1>
+		<h5>A place for friends to share thoughts on books</h5>
+		<hr>
+	</div>
 	<div class="d-flex d-flex text-center align-self-center">
 		<div class="p-4 bg-secondary text-white mx-10">
 			<h1 class="card-header">Register</h1>
 			<form:form action="/register" method="post" modelAttribute="newUser">
 				<div class="form-group card-body">
-					<form:label path="username">Username:</form:label>
-					<form:errors path="username"/>
-					<form:input class="form-control" path="username"/>
+					<form:label path="name">Name:</form:label>
+					<form:errors path="name"/>
+					<form:input class="form-control" path="name"/>
 				</div>
 				<div class="form-group card-body">
 					<form:label path="email">Email:</form:label>

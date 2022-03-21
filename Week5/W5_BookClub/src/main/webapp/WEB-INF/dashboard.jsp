@@ -28,16 +28,49 @@
 <script src="/webjars/jquery/jquery.min.js"></script>
 <script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
 </head>
-<body class="card yt-5 pt-5 bg-primary">
+<body class="card yt-5 pt-5 bg-light">
 	
 	<div>
 		<div class="card-heading text-center align-self-center">
-			<h2>Welcome ${userLogin.username}</h2>
+			<h2>Welcome ${userLogin.name}</h2>
+			<h5>Books from everyone's shelves</h5>
+			<a class="btn btn-primary" href="/books/new">+Add to my shelf</a>
 			<a class="btn btn-danger" href="/logout">Logout</a>
 		</div>
 		<div class="card-body">
 			<hr>
-			<h5 class="card-body">This is your dashboard. Nothing to see here yet.</h5>
+			<table class="table">
+			
+			<tr>
+				<th>ID</th>
+				<th>Title</th>
+				<th>Author Name</th>
+				<th>Posted By</th>
+				<th>Actions</th>
+			</tr>
+			<tr>
+				<c:forEach var="book" items="${allBooks}">
+					<tr>
+						<td><c:out value="${book.id}"/></td>
+						<td>
+							<a href="/books/${book.id}">
+								<c:out value="${book.title}"/>
+							</a>
+						</td>
+						<td><c:out value="${book.authorName}"/></td>
+						<td><c:out value="${book.modifier.name}"/></td> 
+						<td>
+							<a class="btn btn-warning" href="/books/${book.id}/edits">Edit</a>	
+							<c:if test="${book.modifier.id==userLogin.id}">
+									<a class="btn btn-danger" href="/delete/book/${book.id}">Delete</a>
+							</c:if>
+							
+						</td>
+					</tr>
+				</c:forEach>
+			</tr>
+			
+			</table>
 		</div>
 		
 	</div>
