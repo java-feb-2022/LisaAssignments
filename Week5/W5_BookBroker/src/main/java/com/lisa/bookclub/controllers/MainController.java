@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 
 import com.lisa.bookclub.models.Book;
 import com.lisa.bookclub.models.LoginUser;
@@ -192,7 +191,7 @@ public class MainController {
 	public String borrow(@PathVariable("id") Long id, HttpSession session) {
 		Long userId = (Long) session.getAttribute("user_id");
 		User borrower = userService.findUser(userId);
-		Book borrowBook = bookService.findBook(userId);
+		Book borrowBook = bookService.findBook(id);
 		
 		bookService.borrow(borrower, borrowBook);
 		
@@ -204,7 +203,7 @@ public class MainController {
 	public String unborrow(@PathVariable("id") Long id, HttpSession session) {
 		Long userId = (Long) session.getAttribute("user_id");
 		User borrower = userService.findUser(userId);
-		Book returnBook = bookService.findBook(userId);
+		Book returnBook = bookService.findBook(id);
 		
 		bookService.unBorrow(borrower, returnBook);
 		
