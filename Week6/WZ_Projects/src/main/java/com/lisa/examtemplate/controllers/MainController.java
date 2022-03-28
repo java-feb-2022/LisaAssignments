@@ -188,7 +188,7 @@ public class MainController {
 		
 	/////////////////  LIKE  //////////////////////////
 	@GetMapping("/project/like/{id}")
-	public String likeProject(@PathVariable Long id) {
+	public String likeProject(@PathVariable("id") Long id) {
 		Project project=projectService.findProjectById(id);
 		User user=(User)session.getAttribute("userLogin");
 		User userLike=userService.findUserById(user.getId());
@@ -198,7 +198,7 @@ public class MainController {
 
 	/////////////////  DISLIKE  //////////////////////////
 	@GetMapping("/project/dislike/{id}")
-	public String dislikeProject(@PathVariable Long id) {
+	public String dislikeProject(@PathVariable("id") Long id) {
 		Project project=projectService.findProjectById(id);
 		User user=(User)session.getAttribute("userLogin");
 		User userDislike=userService.findUserById(user.getId());
